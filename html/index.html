@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALZENTO — Páginas web que consiguen clientes</title>
+  <meta name="description" content="Diseñamos páginas web para negocios locales enfocadas en posicionamiento en Google y contacto directo por WhatsApp. Resultados reales, no métricas vacías.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo" aria-label="Ir al inicio">
+    <img src="../img/logoalzento.png" alt="ALZENTO Logo" loading="lazy" width="70">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#problema">El problema</a></li>
+    <li><a href="#servicios">Qué incluye</a></li>
+    <li><a href="#sobre">Quiénes somos</a></li>
+    <li><a href="#" class="nav-cta wa-link">Hablar por WhatsApp</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="glow-orb"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow"><span></span>Para negocios locales<span class="pulse-point"></span></p>
+    <h1>TU NEGOCIO<br>VISIBLE EN GOOGLE.<br>TUS CLIENTES EN <em>WHATSAPP</em></h1>
+    <p class="hero-sub">Diseñamos páginas web que posicionan tu negocio en Google y convierten cada visita en un mensaje de WhatsApp. Sin formularios. Sin rodeos. Solo clientes.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn-wa wa-link">
+        <i class="icon-wa"></i>
+        Quiero clientes nuevos
+      </a>
+      <a href="#servicios" class="btn-ghost">Ver qué incluye →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num counter" data-target="48">0</div>
+        <div class="stat-label">Horas de entrega</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num counter" data-target="100">0</div>
+        <div class="stat-label">% Enfocado en resultados</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Google</div>
+        <div class="stat-label">Optimizado para posicionar</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div></div>
+</section>
+
+<!-- MARQUEE DINÁMICO -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="dynamic-marquee"></div>
+</div>
+
+<!-- PROBLEMA -->
+<section id="problema">
+  <div class="section-inner">
+    <div class="section-label">Por qué importa</div>
+    <h2 class="reveal-blur">TU NEGOCIO EXISTE,<br>PERO <em>GOOGLE</em><br>NO LO SABE</h2>
+    <div class="problema-grid">
+      <ul class="problema-list">
+        <li class="reveal">
+          <div class="problema-icon"><i class="icon-search"></i></div>
+          <div class="problema-text">
+            <strong>Tu competencia aparece, tú no</strong>
+            <p>Cuando alguien busca "cerrajero cerca" o "plomero urgente", ven a otros. Tu negocio no existe para ellos.</p>
+          </div>
+        </li>
+        <li class="reveal reveal-delay-1">
+          <div class="problema-icon"><i class="icon-phone-slash"></i></div>
+          <div class="problema-text">
+            <strong>Solo trabajas por referidos</strong>
+            <p>Las recomendaciones son un buen comienzo, pero no son suficientes para crecer de forma estable y predecible.</p>
+          </div>
+        </li>
+        <li class="reveal reveal-delay-2">
+          <div class="problema-icon"><i class="icon-money-lost"></i></div>
+          <div class="problema-text">
+            <strong>Redes sociales que no generan contactos</strong>
+            <p>Muchos me gusta, pocos mensajes. Quien busca un servicio urgente, busca en Google, no en Instagram.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="problema-visual reveal reveal-delay-2">
+        <div class="visual-card glass-panel">
+          <div class="vc-title">Clientes potenciales que te encontrarían</div>
+          <div class="vc-sub">Según el tipo de presencia digital:</div>
+          <br>
+          <div class="vc-bar-group">
+            <div class="vc-bar-label">Sin presencia digital</div>
+            <div class="vc-bar-track"><div class="vc-bar-fill low"></div></div>
+          </div>
+          <div class="vc-bar-group">
+            <div class="vc-bar-label">Solo redes sociales</div>
+            <div class="vc-bar-track"><div class="vc-bar-fill medium"></div></div>
+          </div>
+          <div class="vc-bar-group">
+            <div class="vc-bar-label">Web en Google (ALZENTO)</div>
+            <div class="vc-bar-track glow-track"><div class="vc-bar-fill high"></div></div>
+          </div>
+          <div class="google-mock" id="google-mock">
+            <div class="gm-bar">
+              <div class="gm-logo"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
+              <div class="gm-query"><span class="gm-query-text" id="gm-text"></span></div>
+            </div>
+            <div class="gm-results" id="gm-results"></div>
+          </div>
+          <br>
+          <a href="#" class="btn-ghost small wa-link">Quiero aparecer en Google →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIÓN -->
+<section id="solucion">
+  <div class="section-inner">
+    <div class="section-label">Cómo funciona</div>
+    <h2 class="reveal-blur">TRES PASOS.<br>UN RESULTADO: <em>CLIENTES</em></h2>
+    <p class="solucion-intro reveal">Sin tecnología innecesaria. Sin reuniones interminables. Solo un proceso probado que funciona.</p>
+    <div class="solucion-steps">
+      <div class="step reveal">
+        <div class="step-num glass">01</div>
+        <div class="step-title">Aparecer en Google</div>
+        <p>Diseñamos tu página con las palabras que tus clientes reales escriben en Google. Tu negocio empieza a aparecer donde importa.</p>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num glass">02</div>
+        <div class="step-title">Generar confianza rápido</div>
+        <p>Un diseño claro, directo y adaptado a móvil. El visitante entiende en segundos qué ofreces y por qué elegirte.</p>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-num glass fast-track">03</div>
+        <div class="step-title">Convertir en contacto</div>
+        <p>Un clic y el cliente está en tu WhatsApp con un mensaje listo. Tú cierras el trato, nosotros pusimos al cliente frente a ti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA INTERMEDIO -->
+<div class="mini-cta-banner reveal">
+  <div class="mcb-inner glass-panel">
+    <h3>¿Cuántos clientes se están yendo con tu competencia hoy?</h3>
+    <a href="#" class="btn-wa wa-link"><i class="icon-wa"></i> Cotizar mi página web</a>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-inner">
+    <div class="section-label">Qué incluye</div>
+    <h2 class="reveal-blur">TODO LO QUE NECESITAS<br>PARA <em>CONSEGUIR CLIENTES</em></h2>
+    <div class="servicios-grid" id="servicios-container">
+      <!-- Inyectados por JS -->
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="section-inner">
+    <div class="proyectos-header">
+      <div>
+        <div class="section-label">Ejemplos reales</div>
+        <h2 class="reveal-blur">PÁGINAS QUE<br>YA ESTÁN <em>FUNCIONANDO</em></h2>
+      </div>
+      <a href="#" class="btn-ghost wa-link">Quiero una como estas →</a>
+    </div>
+    <div class="proyectos-grid" id="proyectos-container">
+      <!-- Inyectados por JS -->
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE ALZENTO -->
+<section id="sobre">
+  <div class="section-inner">
+    <div class="sobre-grid">
+      <div class="sobre-texto">
+        <div class="section-label">Quién está detrás</div>
+        <h2 class="reveal-blur">UN PROYECTO<br>ENFOCADO EN <em>RESULTADOS</em></h2>
+        <div class="sobre-body">
+          <p>ALZENTO no es una agencia con decenas de empleados. Es un proyecto dirigido por un desarrollador con un objetivo concreto: <strong>ayudar a negocios pequeños a conseguir clientes a través de internet.</strong></p>
+          <p>Trabajo directamente con cada cliente, sin intermediarios. Eso significa que quien diseña tu página también es quien se asegura de que funcione.</p>
+          <p>Me interesa la tecnología cuando resuelve problemas reales. Una página que genera 5 contactos nuevos por semana para un electricista es más valiosa que cualquier diseño sofisticado que nadie ve.</p>
+        </div>
+        <div class="sobre-valores">
+          <div class="valor-item reveal">
+            <div class="valor-dot"></div>
+            <span>Entrega en máximo 48 horas hábiles</span>
+          </div>
+          <div class="valor-item reveal reveal-delay-1">
+            <div class="valor-dot"></div>
+            <span>Comunicación directa, sin intermediarios</span>
+          </div>
+          <div class="valor-item reveal reveal-delay-2">
+            <div class="valor-dot"></div>
+            <span>Sin contratos largos ni letras pequeñas</span>
+          </div>
+          <div class="valor-item reveal reveal-delay-2">
+            <div class="valor-dot"></div>
+            <span>Si no funciona, hablamos hasta que funcione</span>
+          </div>
+        </div>
+      </div>
+      <div class="sobre-visual reveal reveal-delay-1">
+        <div class="silueta-wrapper" id="silueta-wrapper">
+          <div class="silueta-glow"></div>
+          <img
+            src="../img/silueta.png"
+            alt="Fundador de ALZENTO"
+            class="silueta-img"
+            id="silueta-img"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta">
+  <div class="glow-orb bottom-orb"></div>
+  <div class="cta-inner">
+    <div class="section-label" style="justify-content: center;">Sin compromisos</div>
+    <h2 class="reveal-blur">¿TU NEGOCIO<br>ESTÁ EN <em>GOOGLE</em>?</h2>
+    <p class="reveal reveal-delay-1">Si no apareces cuando alguien busca tu servicio, esa persona va con otro. Podemos resolverlo en 48 horas.</p>
+    <a href="#" class="cta-wa-big wa-link reveal reveal-delay-2">
+      <i class="icon-wa large"></i>
+      Escríbeme, es sin costo
+    </a>
+    <p class="cta-note"><span class="pulse-point green"></span> Respondo en menos de 2 horas · alzento.dev@gmail.com</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">
+    <img src="../img/logoalzento.png" alt="ALZENTO Logo" loading="lazy" width="90">
+  </a>
+  <p class="footer-copy">© <span id="year-placeholder">2026</span> ALZENTO — Páginas web que consiguen clientes.</p>
+  <div class="footer-links">
+    <a href="mailto:alzento.dev@gmail.com">alzento.dev@gmail.com</a>
+    <a href="#" class="wa-link">WhatsApp</a>
+  </div>
+</footer>
+
+<!-- FLOATING WA BUTTON -->
+<a href="#" class="floating-wa wa-link" title="Hablar por WhatsApp">
+  <i class="icon-wa"></i>
+  <span class="floating-wa-tooltip glass-panel">¿Hablamos?</span>
+</a>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
