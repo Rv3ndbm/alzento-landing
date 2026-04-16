@@ -4,7 +4,7 @@
 
 const CONFIG = {
   waNumber: "573023137141",
-  waDefaultMessage: "Hola, vi tu página y quiero información sobre una web que genere clientes para mi negocio 🚀",
+  waDefaultMessage: "Hola, vi tu p\u00e1gina y quisiera informaci\u00f3n sobre c\u00f3mo conseguir clientes para mi negocio con una p\u00e1gina web.",
 };
 
 const MARQUEE_ITEMS = [
@@ -181,21 +181,21 @@ function initGoogleMock() {
       query: "cerrajero cerca de mi",
       results: [
         { highlight: false, domain: "competencia.com", title: "Cerrajería rápida — Servicio 24h", snippet: "Abrimos puertas, cambio de cerraduras..." },
-        { highlight: true,  domain: "tucerrajeriabogota.com", title: "✦ Cerrajería Segura Bogotá — Urgencias 24/7", snippet: "Llámanos ahora. Respuesta inmediata en tu zona." },
+        { highlight: true, domain: "tucerrajeriabogota.com", title: "✦ Cerrajería Segura Bogotá — Urgencias 24/7", snippet: "Llámanos ahora. Respuesta inmediata en tu zona." },
       ]
     },
     {
       query: "barbería cerca medellín",
       results: [
         { highlight: false, domain: "barberia-city.co", title: "Barberías en Medellín", snippet: "Encuentra tu barbería ideal con reseñas..." },
-        { highlight: true,  domain: "kingsbarberia.co", title: "✦ Barbería Kings Medellín — Reserva tu turno hoy", snippet: "Cortes premium. Reserva directa por WhatsApp." },
+        { highlight: true, domain: "kingsbarberia.co", title: "✦ Barbería Kings Medellín — Reserva tu turno hoy", snippet: "Cortes premium. Reserva directa por WhatsApp." },
       ]
     },
     {
       query: "electricista urgente cali",
       results: [
         { highlight: false, domain: "servicios-generales.co", title: "Electricistas en Cali", snippet: "Lista de profesionales certificados..." },
-        { highlight: true,  domain: "electricistacali.com", title: "✦ Electricista Cali Express — Emergencias 24h", snippet: "Llegamos en 30 minutos. Presupuesto gratis." },
+        { highlight: true, domain: "electricistacali.com", title: "✦ Electricista Cali Express — Emergencias 24h", snippet: "Llegamos en 30 minutos. Presupuesto gratis." },
       ]
     }
   ];

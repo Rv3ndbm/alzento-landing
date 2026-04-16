@@ -1442,26 +1442,256 @@ footer {
 }
 
 
-/* ─── RESPONSIVE (MOBILE) ─── */
-@media (max-width: 900px) {
+/* ═══════════════════════════════════════
+   RESPONSIVE — 3 BREAKPOINTS
+   1024px → Tablet
+   768px  → Mobile
+   480px  → Small mobile
+═══════════════════════════════════════ */
 
-  .problema-grid,
-  .solucion-steps,
-  .servicios-grid,
-  .proyectos-grid,
+/* ─── TABLET (≤ 1024px) ─── */
+@media (max-width: 1024px) {
+  /* Nav */
+  .nav-links li:not(:last-child) {
+    display: none;
+  }
+
+  /* Grids → 2 columnas */
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Problema → columna única */
+  .problema-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Solucion steps → 2 col */
+  .solucion-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Sobre */
   .sobre-grid {
     grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .silueta-wrapper {
+    min-height: 300px;
+  }
+
+  .silueta-img {
+    max-height: 320px;
+  }
+}
+
+/* ─── MOBILE (≤ 768px) ─── */
+@media (max-width: 768px) {
+
+  /* ── Secciones base ── */
+  section {
+    padding: 70px 5%;
+  }
+
+  /* ── Tipografía ── */
+  h1 {
+    font-size: clamp(2.8rem, 10vw, 4rem);
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    margin-bottom: 28px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  /* ── Nav mobile ── */
+  nav {
+    padding: 10px 5%;
+  }
+
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-links li:not(:last-child) {
+    display: none;
+  }
+
+  .nav-cta {
+    padding: 10px 18px;
+    font-size: 0.75rem;
+  }
+
+  /* ── Hero ── */
+  #hero {
+    padding: 90px 5% 50px;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    justify-content: center;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn-wa,
+  .btn-ghost {
+    width: 100%;
+    max-width: 340px;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 30px;
+    margin-top: 40px;
+  }
+
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .stat-num {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    text-align: left;
+  }
+
+  /* ── Marquee ── */
+  .marquee-item {
+    font-size: 0.7rem;
+  }
+
+  /* ── Problema ── */
+  .problema-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .visual-card {
+    padding: 22px;
+  }
+
+  .google-mock {
+    height: 230px;
+  }
+
+  /* ── Solucion ── */
+  .solucion-steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .step {
+    padding: 28px 24px;
+  }
+
+  /* ── CTA Banner ── */
+  .mini-cta-banner {
+    padding: 0 5% 70px;
   }
 
   .mcb-inner {
     flex-direction: column;
     text-align: center;
-    gap: 24px;
+    gap: 20px;
+    padding: 28px 24px;
   }
 
+  .mcb-inner h3 {
+    font-size: 1.4rem;
+  }
+
+  /* ── Servicios ── */
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .servicio-card {
+    padding: 28px;
+  }
+
+  .servicio-card.featured {
+    padding: 28px;
+  }
+
+  /* ── Proyectos ── */
+  .proyectos-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* ── Sobre ── */
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .sobre-card {
+    padding: 24px;
+  }
+
+  .silueta-wrapper {
+    min-height: 260px;
+    order: -1; /* Silueta arriba del texto en mobile */
+  }
+
+  .silueta-img {
+    max-height: 260px;
+  }
+
+  /* ── CTA Final ── */
+  #cta {
+    padding: 70px 5%;
+  }
+
+  .cta-wa-big {
+    font-size: 1rem;
+    padding: 16px 28px;
+    width: 100%;
+    max-width: 340px;
+    justify-content: center;
+  }
+
+  /* ── Footer ── */
   footer {
     flex-direction: column;
     text-align: center;
+    gap: 16px;
+    padding: 30px 5%;
   }
 
   .footer-links {
@@ -1471,20 +1701,133 @@ footer {
     align-items: center;
   }
 
-  .nav-links li:not(:last-child) {
-    display: none;
+  /* ── Floating WA ── */
+  .floating-wa {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
   }
 
-  .hero-stats {
-    gap: 30px;
-    flex-direction: column;
+  .floating-wa .icon-wa {
+    width: 26px;
+    height: 26px;
   }
 
+  .floating-wa-tooltip {
+    display: none; /* Ocultar tooltip en mobile */
+  }
+}
+
+/* ─── SMALL MOBILE (≤ 480px) ─── */
+@media (max-width: 480px) {
+
+  /* ── Tipografía ── */
   h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2.4rem, 11vw, 3rem);
   }
 
-  .sobre-grid {
-    gap: 40px;
+  h2 {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+  }
+
+  /* ── Nav: solo logo + WA ── */
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-cta {
+    padding: 8px 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+
+  /* ── Hero ── */
+  #hero {
+    padding: 80px 5% 40px;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  /* ── Stats horizontal squeeze ── */
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+  }
+
+  /* ── Section padding ── */
+  section {
+    padding: 60px 5%;
+  }
+
+  /* ── Cards ── */
+  .paso-num,
+  .step-num {
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+  }
+
+  .problema-list li {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .problema-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  /* ── Google mock ultra compacto ── */
+  .google-mock {
+    height: 210px;
+    padding: 12px;
+  }
+
+  .gm-bar {
+    padding: 6px 10px;
+    margin-bottom: 8px;
+  }
+
+  .gm-logo {
+    font-size: 0.75rem;
+  }
+
+  .gm-query {
+    font-size: 0.75rem;
+  }
+
+  .gm-title {
+    font-size: 0.78rem;
+  }
+
+  .gm-snippet {
+    font-size: 0.68rem;
+  }
+
+  /* ── CTA ── */
+  .cta-wa-big {
+    font-size: 0.9rem;
+    padding: 14px 22px;
+  }
+
+  .mcb-inner h3 {
+    font-size: 1.2rem;
+  }
+
+  /* ── Silueta ── */
+  .silueta-img {
+    max-height: 220px;
+  }
+
+  .silueta-glow {
+    width: 180px;
+    height: 180px;
   }
 }
