@@ -8,141 +8,95 @@ const CONFIG = {
 };
 
 const MARQUEE_ITEMS = [
-  "Clientes desde Google", "WhatsApp en un clic", "Diseño que convierte", "Entrega en 48h",
-  "SEO desde el día 1", "Sin formularios inútiles", "Resultados medibles", "Negocios locales",
-  "Score 99+ Velocidad", "Dominio & Hosting incluido", "Cero letras pequeñas"
+  "Clientes desde Google", "WhatsApp en un clic", "Diseño que convierte",
+  "SEO desde el primer día", "Sin formularios inútiles", "Negocios locales",
+  "Carga en menos de 1s", "Dominio & Hosting incluido"
 ];
-
-const SECTORES_DATA = {
-  cerrajero: {
-    query: "cerrajero urgente cerca de mi",
-    name: "Cerrajería Segura Bogotá — Urgencias 24/7 en tu zona",
-    domain: "www.cerrajeriasegura.co",
-    rating: "5.0 (84 opiniones)",
-    highlight: "· Llegamos en 20 min",
-    desc: "¿Olvidaste tus llaves o chapa trabada? Servicio profesional urgente en Bogotá. Precios justos sin sorpresas y contacto directo en un clic.",
-    msg: "Hola! Busqué cerrajero urgente en Google y necesito abrir una chapa. ¿Están disponibles?"
-  },
-  barberia: {
-    query: "mejor barbería cerca de mi",
-    name: "Barbería Kings Club Medellín — Reserva tu turno hoy",
-    domain: "www.kingsbarberia.co",
-    rating: "4.9 (112 opiniones)",
-    highlight: "· Cortes clásicos & barba",
-    desc: "Cortes de cabello y afeitado tradicional con barberos expertos en Medellín. Agenda tu cita directa por WhatsApp sin llamadas ni filas.",
-    msg: "Hola! Vi su barbería en Google, quiero agendar un corte y barba para hoy."
-  },
-  odontologo: {
-    query: "urgencias odontológicas 24h",
-    name: "Clínica Dental Sonrisas Cali — Atención Inmediata",
-    domain: "www.clinicadentalsonrisas.com",
-    rating: "5.0 (64 opiniones)",
-    highlight: "· Especialistas certificados",
-    desc: "Dolor dental agudo o emergencias. Odontólogos de guardia en Cali. Instalaciones modernas, atención sin dolor y contacto por WhatsApp.",
-    msg: "Hola, busqué dentista de urgencia en Google, ¿tienen cita libre de inmediato?"
-  },
-  electricista: {
-    query: "electricista a domicilio urgente",
-    name: "Electricista Cali Express — Emergencias 24 Horas",
-    domain: "www.electricistacali.com",
-    rating: "4.9 (95 opiniones)",
-    highlight: "· Técnicos certificados",
-    desc: "Cortocircuitos, instalación de tableros y reparaciones eléctricas urgentes. Presupuesto sin compromiso. Llegamos en 30 minutos.",
-    msg: "Buenas tardes, vi su página en Google, tengo un corto en mi casa, ¿pueden venir?"
-  },
-  taller: {
-    query: "taller mecánico frenos cerca",
-    name: "Taller Mecánico Master — Diagnóstico y Frenos",
-    domain: "www.tallermasterauto.co",
-    rating: "5.0 (72 opiniones)",
-    highlight: "· Repuestos originales",
-    desc: "Mantenimiento preventivo, frenos, suspensión y scanner automotriz. Garantía por escrito en cada reparación. Cotiza por WhatsApp.",
-    msg: "Hola, encontré su taller en Google, ¿hacen revisión de frenos y cambio de aceite hoy?"
-  }
-};
 
 const PROYECTOS = [
   {
     sector: "Cerrajería",
-    name: "Cerrajería Segura Bogotá",
-    desc: "Optimizada para búsquedas locales de urgencia extrema. El visitante llega con la puerta trabada, ve la garantía de 20 minutos y escribe al WhatsApp en segundos.",
+    name: "Cerrajería Segura",
+    desc: "Diseñada para búsquedas de urgencia extrema. El cliente llega con la puerta cerrada y escribe en segundos.",
     bg: "linear-gradient(135deg, #182234, #0f172a)",
-    stat: "+24 Contactos / mes",
     tags: ["SEO Local", "Urgencias 24h", "WhatsApp directo"]
   },
   {
-    sector: "Barbería & Estilo",
-    name: "Barbería Kings Club Medellín",
-    desc: "Reservas directas por WhatsApp con catálogo de estilos fotográficos y reseñas 5 estrellas de Google Maps. Cero tiempo perdido respondiendo llamadas.",
+    sector: "Barbería",
+    name: "Barbería Kings Club",
+    desc: "Catálogo de cortes y reservas directas a WhatsApp sin tener que contestar llamadas.",
     bg: "linear-gradient(135deg, #2b1810, #140d0a)",
-    stat: "Turnos llenos semanales",
-    tags: ["Reservas WhatsApp", "Google Maps #1", "Móvil First"]
+    tags: ["Reservas WhatsApp", "Google Maps", "Móvil First"]
   },
   {
     sector: "Electricidad",
-    name: "Electricista Cali Express",
-    desc: "Estructura posicionada para términos de alta intención comercial. Genera llamadas y mensajes continuos de clientes nuevos sin invertir un solo peso en publicidad paga.",
+    name: "Electricista Express",
+    desc: "Posicionada para emergencias locales. Recibe contactos semanales sin pagar pauta.",
     bg: "linear-gradient(135deg, #102619, #0a1810)",
-    stat: "+19 Clientes / mes",
-    tags: ["Tráfico 100% Orgánico", "Score 99 PageSpeed", "Cierre Inmediato"]
+    tags: ["Tráfico Orgánico", "Carga Rápida", "Contacto Inmediato"]
   }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Año dinámico en Footer
+  // 1. Año dinámico
   const yearEl = document.getElementById("year-placeholder");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // 2. WhatsApp default links
+  // 2. WhatsApp links inteligentes con pre-redacción contextual
   updateWhatsAppLinks();
 
-  // 3. Marquee Dinámico
+  // 3. Marquee
   initMarquee();
 
   // 4. Proyectos
   renderProyectos();
 
-  // 5. Interacción de Tipografía en Hero (Efecto Proximidad Cursor Letra por Letra)
+  // 5. Interacción de Tipografía en Hero (Proximidad Cursor Letra por Letra)
   initHeroTypographyInteractive();
 
-  // 6. Efecto Spotlight Cursor en Cards
+  // 5.1 Consola Interactiva del Hero (Showcase de Sectores Dual)
+  initHeroStageSectors();
+
+  // 6. Spotlight Cursor en Cards
   initSpotlightCards();
 
-  // 7. Micro-interacción Botones Magnéticos
+  // 7. Botones Magnéticos
   initMagneticButtons();
 
-  // 8. Simulador de Búsqueda de Google Ultra Mejorado
-  initEnhancedGoogleSimulator();
-
-  // 9. Acordeón de Preguntas Frecuentes
+  // 8. Acordeón de FAQ (Cajitas independientes)
   initFaqAccordion();
 
-  // 10. Floating WhatsApp Popup Proactivo
+  // 9. Floating WhatsApp Popup Proactivo
   initFloatingWaPopup();
 
-  // 11. Intersection Observer para Animaciones Reveal y Contadores
+  // 10. Intersection Observer
   initScrollAnimations();
 
-  // 12. Navbar Scroll
+  // 11. Navbar Scroll
   initNavbarScroll();
 
-  // 13. Parallax en Silueta del Fundador
+  // 12. Parallax en Silueta
   initSiluetaParallax();
+
+  // 13. Rayo Láser Energético en Cómo Funciona (Efecto Scroll)
+  initSolucionLaserScroll();
+
+  // 14. Barra de Progreso de Lectura
+  initScrollProgressBar();
 });
 
-// ─── 1. WHATSAPP LINKS ───
+// ─── 1. WHATSAPP LINKS INTELIGENTES (CRO CONTEXTUAL) ───
 function updateWhatsAppLinks() {
-  const defaultUrl = `https://wa.me/${CONFIG.waNumber}?text=${encodeURIComponent(CONFIG.waDefaultMessage)}`;
   document.querySelectorAll(".wa-link").forEach(link => {
-    if (!link.getAttribute("data-custom-wa")) {
-      link.href = defaultUrl;
-    }
+    const customMsg = link.getAttribute("data-wa-msg");
+    const msg = customMsg || CONFIG.waDefaultMessage;
+    link.href = `https://wa.me/${CONFIG.waNumber}?text=${encodeURIComponent(msg)}`;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
   });
 }
 
-// ─── 2. MARQUEE DINÁMICO ───
+// ─── 2. MARQUEE ───
 function initMarquee() {
   const marqueeTrack = document.getElementById("dynamic-marquee");
   if (marqueeTrack) {
@@ -151,7 +105,7 @@ function initMarquee() {
   }
 }
 
-// ─── 3. PROYECTOS / CASOS REALES ───
+// ─── 3. PROYECTOS ───
 function renderProyectos() {
   const prjContainer = document.getElementById("proyectos-container");
   if (!prjContainer) return;
@@ -164,15 +118,14 @@ function renderProyectos() {
             <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
           </div>
           <div class="mb-content">
-            <span class="mb-badge-google">📍 Posicionado #1 Google</span>
+            <span class="mb-badge-google">📍 Posicionado en Google</span>
             <div class="mb-hero-text">${p.name.toUpperCase()}</div>
-            <div style="font-size: 0.68rem; color: #94a3b8;">⭐⭐⭐⭐⭐ 5.0 · Servicio Garantizado</div>
             <div class="mb-cta-mock">💬 WhatsApp Directo</div>
           </div>
         </div>
       </div>
       <div class="proyecto-info">
-        <div class="proyecto-sector">${p.sector} · <strong style="color: #4ade80;">${p.stat}</strong></div>
+        <div class="proyecto-sector">${p.sector}</div>
         <div class="proyecto-name">${p.name}</div>
         <p class="proyecto-desc">${p.desc}</p>
         <div class="proyecto-tags">
@@ -183,35 +136,36 @@ function renderProyectos() {
   `).join("");
 }
 
-// ─── 4. TIPOGRAFÍA INTERACTIVA DEL HERO CON EL CURSOR ───
-/**
- * Envuelve cada letra del H1 en un <span> y calcula en tiempo real
- * la distancia euclidiana entre el cursor y el centro de cada letra.
- * Conforme el cursor se acerca, la letra cambia suavemente de color,
- * eleva su escala y emite un resplandor esmeralda / neon individual.
- */
+// ─── 4. TIPOGRAFÍA INTERACTIVA DEL HERO ───
 function initHeroTypographyInteractive() {
   const title = document.getElementById("hero-main-title");
   if (!title) return;
 
-  // Transformar nodos de texto a spans de caracteres preservando etiquetas <br> y <em>
   function wrapCharacters(node) {
     const children = Array.from(node.childNodes);
     children.forEach(child => {
       if (child.nodeType === Node.TEXT_NODE) {
         const text = child.textContent;
+        // Separar por palabras para que NUNCA se rompan palabras por la mitad
+        const words = text.split(" ");
         const fragment = document.createDocumentFragment();
-        for (let i = 0; i < text.length; i++) {
-          const char = text[i];
-          if (char === " " || char === "\n") {
-            fragment.appendChild(document.createTextNode(char));
-          } else {
-            const span = document.createElement("span");
-            span.className = "char";
-            span.textContent = char;
-            fragment.appendChild(span);
+
+        words.forEach((word, wIdx) => {
+          if (word.length > 0) {
+            const wordSpan = document.createElement("span");
+            wordSpan.className = "word";
+            for (let i = 0; i < word.length; i++) {
+              const charSpan = document.createElement("span");
+              charSpan.className = "char";
+              charSpan.textContent = word[i];
+              wordSpan.appendChild(charSpan);
+            }
+            fragment.appendChild(wordSpan);
           }
-        }
+          if (wIdx < words.length - 1) {
+            fragment.appendChild(document.createTextNode(" "));
+          }
+        });
         child.replaceWith(fragment);
       } else if (child.nodeType === Node.ELEMENT_NODE) {
         wrapCharacters(child);
@@ -237,12 +191,11 @@ function initHeroTypographyInteractive() {
     });
   }
 
-  // Actualizar rectángulos inicialmente y en resize/scroll
   updateRects();
   window.addEventListener("resize", updateRects, { passive: true });
   window.addEventListener("scroll", updateRects, { passive: true });
 
-  const radius = 145; // Radio de influencia en px
+  const radius = 135;
   let mouseX = -9999;
   let mouseY = -9999;
   let isHovering = false;
@@ -278,24 +231,20 @@ function initHeroTypographyInteractive() {
       const dist = Math.hypot(dx, dy);
 
       if (dist < radius) {
-        // Cuanto más cerca, mayor intensidad t entre 0 y 1
         const rawT = 1 - (dist / radius);
-        const t = rawT * rawT; // Easing cuadrático para suavidad
+        const t = rawT * rawT;
 
         if (item.isEm) {
-          // Letras dentro de <em> (originalmente huecas con borde)
           item.span.style.color = `rgba(34, 197, 94, ${0.45 + 0.55 * t})`;
           item.span.style.webkitTextStroke = `1.2px #4ade80`;
-          item.span.style.textShadow = `0 0 ${(22 * t).toFixed(1)}px rgba(74, 222, 128, ${(0.85 * t).toFixed(2)})`;
-          item.span.style.transform = `translateY(${(-3.5 * t).toFixed(1)}px) scale(${(1 + 0.08 * t).toFixed(2)})`;
+          item.span.style.textShadow = `0 0 ${(20 * t).toFixed(1)}px rgba(74, 222, 128, ${(0.85 * t).toFixed(2)})`;
+          item.span.style.transform = `translateY(${(-3 * t).toFixed(1)}px) scale(${(1 + 0.08 * t).toFixed(2)})`;
         } else {
-          // Letras estándar blancas
-          item.span.style.color = t > 0.4 ? "#4ade80" : "#ffffff";
-          item.span.style.textShadow = `0 0 ${(18 * t).toFixed(1)}px rgba(34, 197, 94, ${(0.95 * t).toFixed(2)})`;
-          item.span.style.transform = `translateY(${(-4 * t).toFixed(1)}px) scale(${(1 + 0.09 * t).toFixed(2)})`;
+          item.span.style.color = t > 0.35 ? "#4ade80" : "#ffffff";
+          item.span.style.textShadow = `0 0 ${(16 * t).toFixed(1)}px rgba(34, 197, 94, ${(0.95 * t).toFixed(2)})`;
+          item.span.style.transform = `translateY(${(-3.5 * t).toFixed(1)}px) scale(${(1 + 0.08 * t).toFixed(2)})`;
         }
       } else {
-        // Reset a estado original
         item.span.style.color = "";
         item.span.style.webkitTextStroke = "";
         item.span.style.textShadow = "";
@@ -315,13 +264,123 @@ function initHeroTypographyInteractive() {
   }
 }
 
+// ─── 4.1 CONSOLA INTERACTIVA DEL HERO (SHOWCASE DE SECTORES DUAL) ───
+const HERO_SECTORS = {
+  cerrajero: {
+    query: "cerrajero urgente cerca de mi",
+    name: "Cerrajería Segura Bogotá",
+    rating: "5.0 (84 opiniones)",
+    desc: "Servicio a domicilio en 20 min. Apertura de puertas y cambio de guardas garantizado.",
+    avatar: "C",
+    clientMsg: "Hola, los vi en los primeros de Google. Se me trabó la cerradura, ¿pueden venir ahora?",
+    bizMsg: "¡Hola! Claro que sí, tenemos un técnico a 15 minutos en tu sector. ¿Cuál es tu dirección?"
+  },
+  barberia: {
+    query: "mejor barbería cerca de mi",
+    name: "Barbería Kings Club Medellín",
+    rating: "4.9 (112 opiniones)",
+    desc: "Cortes de autor, perfilado de barba y toalla caliente. Agenda tu cita directa en segundos.",
+    avatar: "B",
+    clientMsg: "Hola, vi su barbería en Google, ¿tienen espacio para corte y barba hoy a las 4 PM?",
+    bizMsg: "¡Hola! Sí, tenemos turno disponible con Carlos a las 4:00 PM. ¿Te agendamos?"
+  },
+  odontologo: {
+    query: "urgencias odontológicas 24h",
+    name: "Clínica Dental Sonrisas Cali",
+    rating: "5.0 (64 opiniones)",
+    desc: "Atención prioritaria para dolor agudo o emergencias. Odontólogos certificados.",
+    avatar: "D",
+    clientMsg: "Buenas tardes, busqué dentista de urgencia en Google. Tengo dolor fuerte en una muela.",
+    bizMsg: "Hola, podemos atenderte de inmediato en nuestra sede norte. ¿Te apartamos el box?"
+  },
+  electricista: {
+    query: "electricista a domicilio urgente",
+    name: "Electricista Cali Express",
+    rating: "4.9 (95 opiniones)",
+    desc: "Cortocircuitos, instalación de tableros y emergencias eléctricas certificadas.",
+    avatar: "E",
+    clientMsg: "Hola, vi su web en Google. Se fue la luz en mi local y huele a quemado, ¿pueden revisar?",
+    bizMsg: "¡Hola! Desconecta la llave general por seguridad. Vamos saliendo hacia allá en 15 min."
+  }
+};
+
+function initHeroStageSectors() {
+  const chips = document.querySelectorAll("#hero-sector-chips .stage-chip");
+  const queryEl = document.getElementById("hero-search-query");
+  const nameEl = document.getElementById("hero-biz-name");
+  const ratingEl = document.getElementById("hero-biz-rating");
+  const descEl = document.getElementById("hero-biz-desc");
+  const avatarEl = document.getElementById("hero-wa-avatar-char");
+  const titleEl = document.getElementById("hero-wa-biz-title");
+  const clientTextEl = document.getElementById("hero-chat-client-text");
+  const bizTextEl = document.getElementById("hero-chat-biz-text");
+  const stage = document.getElementById("hero-stage");
+
+  if (!chips.length || !queryEl) return;
+
+  const sectorKeys = Object.keys(HERO_SECTORS);
+  let currentIdx = 0;
+  let autoTimer = null;
+  let userInteracted = false;
+
+  function switchSector(key) {
+    const data = HERO_SECTORS[key] || HERO_SECTORS.cerrajero;
+
+    chips.forEach(chip => {
+      chip.classList.toggle("active", chip.getAttribute("data-sector") === key);
+    });
+
+    if (queryEl) queryEl.textContent = data.query;
+    if (nameEl) nameEl.textContent = data.name;
+    if (ratingEl) ratingEl.textContent = data.rating;
+    if (descEl) descEl.textContent = data.desc;
+    if (avatarEl) avatarEl.textContent = data.avatar;
+    if (titleEl) titleEl.textContent = data.name.split(" ").slice(0, 2).join(" ");
+    if (clientTextEl) clientTextEl.textContent = data.clientMsg;
+    if (bizTextEl) bizTextEl.textContent = data.bizMsg;
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      userInteracted = true;
+      if (autoTimer) clearTimeout(autoTimer);
+      const sector = chip.getAttribute("data-sector");
+      switchSector(sector);
+    });
+  });
+
+  function autoCycle() {
+    if (userInteracted) return;
+    autoTimer = setTimeout(() => {
+      currentIdx = (currentIdx + 1) % sectorKeys.length;
+      switchSector(sectorKeys[currentIdx]);
+      autoCycle();
+    }, 6000);
+  }
+
+  autoCycle();
+
+  // 3D tilt sutil en mousemove sobre la consola
+  if (stage && window.matchMedia("(pointer: fine)").matches) {
+    stage.addEventListener("mousemove", (e) => {
+      const rect = stage.getBoundingClientRect();
+      const x = (e.clientX - (rect.left + rect.width / 2)) / (rect.width / 2);
+      const y = (e.clientY - (rect.top + rect.height / 2)) / (rect.height / 2);
+      stage.style.transform = `perspective(1000px) rotateX(${-y * 2.2}deg) rotateY(${x * 2.2}deg) translateY(-3px)`;
+    });
+
+    stage.addEventListener("mouseleave", () => {
+      stage.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)";
+    });
+  }
+}
+
 // ─── 5. SPOTLIGHT CURSOR EN TARJETAS ───
 function initSpotlightCards() {
   document.addEventListener("mousemove", (e) => {
     const cards = document.querySelectorAll(".spotlight-card");
     cards.forEach(card => {
       const rect = card.getBoundingClientRect();
-      // Solo calcular si está cerca de la pantalla
       if (rect.bottom < 0 || rect.top > window.innerHeight) return;
 
       const x = e.clientX - rect.left;
@@ -335,7 +394,6 @@ function initSpotlightCards() {
 
 // ─── 6. BOTONES MAGNÉTICOS ───
 function initMagneticButtons() {
-  // Solo en dispositivos con puntero fino (Desktop / Mouse)
   if (!window.matchMedia("(pointer: fine)").matches) return;
 
   const magneticBtns = document.querySelectorAll(".btn-magnetic");
@@ -344,187 +402,51 @@ function initMagneticButtons() {
       const rect = btn.getBoundingClientRect();
       const x = e.clientX - (rect.left + rect.width / 2);
       const y = e.clientY - (rect.top + rect.height / 2);
-      btn.style.transform = `translate(${x * 0.22}px, ${y * 0.22}px)`;
+      btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
     });
 
     btn.addEventListener("mouseleave", () => {
       btn.style.transform = "translate(0px, 0px)";
-      setTimeout(() => { btn.style.transform = ""; }, 300);
+      setTimeout(() => { btn.style.transform = ""; }, 250);
     });
   });
 }
 
-// ─── 7. SIMULADOR DE BÚSQUEDA DE GOOGLE MEJORADO ───
-function initEnhancedGoogleSimulator() {
-  const chipsContainer = document.getElementById("sim-chips");
-  const gmText = document.getElementById("gm-text");
-  const simDomain = document.getElementById("sim-domain");
-  const simTitle = document.getElementById("sim-title");
-  const simRating = document.getElementById("sim-rating");
-  const simDesc = document.getElementById("sim-desc");
-  const simWaBtn = document.getElementById("sim-wa-btn");
-  const simBtnText = document.getElementById("sim-btn-text");
-  const customInput = document.getElementById("sim-custom-input");
-  const customBtn = document.getElementById("sim-custom-btn");
-  const activeCard = document.getElementById("gm-active-card");
-
-  if (!gmText || !simTitle) return;
-
-  let currentKey = "cerrajero";
-  let typingTimer = null;
-  let autoCycleTimer = null;
-  let userInteracted = false;
-
-  const keys = Object.keys(SECTORES_DATA);
-  let cycleIdx = 0;
-
-  function setSector(key, customName = null) {
-    const data = SECTORES_DATA[key] || SECTORES_DATA.cerrajero;
-    currentKey = key;
-
-    // Actualizar botones de chips
-    if (chipsContainer) {
-      chipsContainer.querySelectorAll(".sim-chip").forEach(btn => {
-        btn.classList.toggle("active", btn.getAttribute("data-sector") === key && !customName);
-      });
-    }
-
-    // Efecto de typing en la query
-    const targetQuery = customName ? `${customName.toLowerCase()} cerca de mi` : data.query;
-    typeQuery(targetQuery, () => {
-      // Animar flash en la tarjeta de resultados
-      if (activeCard) {
-        activeCard.style.transform = "scale(0.98)";
-        setTimeout(() => { activeCard.style.transform = "scale(1)"; }, 180);
-      }
-
-      const displayName = customName ? `${customName} — Servicio Profesional 24h` : data.name;
-      const cleanSlug = customName ? customName.toLowerCase().replace(/[^a-z0-9]/g, "") : "negociolocal";
-      const displayDomain = customName ? `www.${cleanSlug}.com` : data.domain;
-      const displayDesc = customName
-        ? `Servicio inmediato y garantizado de ${customName}. Cotiza directamente por WhatsApp en 1 clic y con los mejores precios.`
-        : data.desc;
-      const waMsg = customName
-        ? `Hola, vi cómo se vería "${customName}" posicionado en Google con ALZENTO y quiero cotizar mi página web.`
-        : data.msg;
-
-      simTitle.textContent = displayName;
-      simDomain.textContent = displayDomain;
-      simDesc.textContent = displayDesc;
-      if (simRating) simRating.textContent = data.rating;
-
-      if (simWaBtn) {
-        const waLink = `https://wa.me/${CONFIG.waNumber}?text=${encodeURIComponent(waMsg)}`;
-        simWaBtn.href = waLink;
-        simWaBtn.setAttribute("data-custom-wa", "true");
-        simWaBtn.target = "_blank";
-        simWaBtn.rel = "noopener noreferrer";
-      }
-
-      if (simBtnText) {
-        simBtnText.textContent = customName ? `Cotizar la web de ${customName}` : "Escribir por WhatsApp a este negocio";
-      }
-    });
-  }
-
-  function typeQuery(text, onComplete) {
-    if (typingTimer) clearInterval(typingTimer);
-    gmText.textContent = "";
-    let i = 0;
-    typingTimer = setInterval(() => {
-      if (i < text.length) {
-        gmText.textContent += text[i++];
-      } else {
-        clearInterval(typingTimer);
-        typingTimer = null;
-        if (onComplete) onComplete();
-      }
-    }, 45);
-  }
-
-  // Clic en chips
-  if (chipsContainer) {
-    chipsContainer.addEventListener("click", (e) => {
-      const chip = e.target.closest(".sim-chip");
-      if (!chip) return;
-      userInteracted = true;
-      stopAutoCycle();
-      const sector = chip.getAttribute("data-sector");
-      setSector(sector);
-    });
-  }
-
-  // Input personalizado
-  function handleCustomSubmit() {
-    if (!customInput) return;
-    const val = customInput.value.trim();
-    if (!val) return;
-    userInteracted = true;
-    stopAutoCycle();
-    setSector("cerrajero", val);
-  }
-
-  if (customBtn && customInput) {
-    customBtn.addEventListener("click", handleCustomSubmit);
-    customInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        handleCustomSubmit();
-      }
-    });
-  }
-
-  // Auto-ciclo suave si el usuario no interactúa
-  function startAutoCycle() {
-    if (userInteracted) return;
-    autoCycleTimer = setTimeout(() => {
-      cycleIdx = (cycleIdx + 1) % keys.length;
-      setSector(keys[cycleIdx]);
-      startAutoCycle();
-    }, 7000);
-  }
-
-  function stopAutoCycle() {
-    if (autoCycleTimer) {
-      clearTimeout(autoCycleTimer);
-      autoCycleTimer = null;
-    }
-  }
-
-  // Iniciar en el primer sector tras carga
-  setTimeout(() => {
-    setSector("cerrajero");
-    startAutoCycle();
-  }, 1000);
-}
-
-// ─── 8. ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ) ───
+// ─── 8. ACORDEÓN DE PREGUNTAS FRECUENTES (CAJITAS INDEPENDIENTES) ───
 function initFaqAccordion() {
-  const faqItems = document.querySelectorAll(".faq-item");
-  faqItems.forEach(item => {
-    const btn = item.querySelector(".faq-question");
+  const faqBoxes = document.querySelectorAll(".faq-box");
+  if (!faqBoxes.length) return;
+
+  faqBoxes.forEach(box => {
+    const btn = box.querySelector(".faq-box-btn");
     if (!btn) return;
 
-    btn.addEventListener("click", () => {
-      const isOpen = item.classList.contains("active");
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isOpen = box.classList.contains("open");
 
-      // Cerrar los demás acordeones para mantener orden visual
-      faqItems.forEach(other => {
-        if (other !== item) {
-          other.classList.remove("active");
-          const otherBtn = other.querySelector(".faq-question");
+      // 1. Cerrar cualquier otra cajita abierta (sin tocar jamás ninguna otra clase)
+      faqBoxes.forEach(other => {
+        if (other !== box) {
+          other.classList.remove("open");
+          const otherBtn = other.querySelector(".faq-box-btn");
           if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
         }
       });
 
-      // Alternar el actual
-      item.classList.toggle("active", !isOpen);
-      btn.setAttribute("aria-expanded", String(!isOpen));
+      // 2. Si estaba abierta se cierra; si estaba cerrada se abre
+      if (isOpen) {
+        box.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+      } else {
+        box.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
     });
   });
 }
 
-// ─── 9. FLOATING WHATSAPP POPUP PROACTIVO ───
+// ─── 9. POPUP PROACTIVO WHATSAPP ───
 function initFloatingWaPopup() {
   const popup = document.getElementById("floating-wa-popup");
   const closeBtn = document.getElementById("fwp-close-btn");
@@ -532,12 +454,11 @@ function initFloatingWaPopup() {
 
   let dismissed = false;
 
-  // Mostrar a los 5 segundos
   setTimeout(() => {
     if (!dismissed) {
       popup.classList.add("show");
     }
-  }, 5000);
+  }, 4500);
 
   if (closeBtn) {
     closeBtn.addEventListener("click", (e) => {
@@ -548,15 +469,12 @@ function initFloatingWaPopup() {
   }
 }
 
-// ─── 10. SCROLL REVEAL Y CONTADORES ───
+// ─── 10. SCROLL REVEAL ───
 function initScrollAnimations() {
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
-        if (entry.target.classList.contains("counter")) {
-          animateCounter(entry.target);
-        }
         obs.unobserve(entry.target);
       }
     });
@@ -565,30 +483,9 @@ function initScrollAnimations() {
     threshold: 0.05
   });
 
-  document.querySelectorAll(".reveal, .reveal-blur, .counter").forEach(el => {
+  document.querySelectorAll(".reveal, .reveal-blur").forEach(el => {
     observer.observe(el);
   });
-}
-
-function animateCounter(el) {
-  const target = +el.getAttribute("data-target");
-  if (!target) return;
-  const duration = 1800;
-  const startTime = performance.now();
-
-  function update(now) {
-    const elapsed = now - startTime;
-    if (elapsed < duration) {
-      const progress = elapsed / duration;
-      // Curva easeOutExpo
-      const current = Math.floor(target * (1 - Math.pow(2, -10 * progress)));
-      el.textContent = current;
-      requestAnimationFrame(update);
-    } else {
-      el.textContent = target;
-    }
-  }
-  requestAnimationFrame(update);
 }
 
 // ─── 11. NAVBAR SCROLL ───
@@ -601,13 +498,12 @@ function initNavbarScroll() {
   }
 }
 
-// ─── 12. PARALLAX EN SILUETA FUNDADOR ───
+// ─── 12. PARALLAX SILUETA ───
 function initSiluetaParallax() {
   const siluetaWrapper = document.getElementById("silueta-wrapper");
   const siluetaImg = document.getElementById("silueta-img");
   if (!siluetaWrapper || !siluetaImg) return;
 
-  // Solo en desktops
   if (!window.matchMedia("(pointer: fine)").matches) return;
 
   document.addEventListener("mousemove", (e) => {
@@ -615,6 +511,108 @@ function initSiluetaParallax() {
     if (rect.top > window.innerHeight || rect.bottom < 0) return;
     const dx = (e.clientX / window.innerWidth - 0.5);
     const dy = (e.clientY / window.innerHeight - 0.5);
-    siluetaImg.style.transform = `translate(${dx * 14}px, ${dy * 8}px)`;
+    siluetaImg.style.transform = `translate(${dx * 12}px, ${dy * 7}px)`;
   }, { passive: true });
+}
+
+// ─── 13. RAYO LÁSER DINÁMICO EN 'CÓMO FUNCIONA' (SCROLL-DRIVEN) ───
+function initSolucionLaserScroll() {
+  const section = document.getElementById("solucion");
+  const beam = document.getElementById("solucion-laser-beam");
+  const stepCards = [
+    document.getElementById("step-card-1"),
+    document.getElementById("step-card-2"),
+    document.getElementById("step-card-3")
+  ];
+
+  if (!section || !beam) return;
+
+  const isMobile = () => window.innerWidth <= 768;
+
+  function handleScrollProgress() {
+    const rect = section.getBoundingClientRect();
+    const windowH = window.innerHeight;
+
+    // Rango de activación mientras la sección transita la pantalla
+    const startPoint = windowH * 0.75;
+    const endPoint = windowH * 0.15;
+    const scrollRange = rect.height + (startPoint - endPoint);
+    const scrollDistance = startPoint - rect.top;
+
+    let progress = scrollDistance / scrollRange;
+    progress = Math.max(0, Math.min(1, progress));
+
+    const percent = Math.min(100, Math.max(0, progress * 100));
+
+    if (isMobile()) {
+      beam.style.height = `${percent}%`;
+      beam.style.width = "100%";
+    } else {
+      beam.style.width = `${percent}%`;
+      beam.style.height = "100%";
+    }
+
+    // Activar estados energizados con halo progresivo
+    if (stepCards[0]) {
+      stepCards[0].classList.toggle("energized", progress >= 0.12);
+    }
+    if (stepCards[1]) {
+      stepCards[1].classList.toggle("energized", progress >= 0.45);
+    }
+    if (stepCards[2]) {
+      stepCards[2].classList.toggle("energized", progress >= 0.78);
+    }
+  }
+
+  // Interacción manual por hover
+  stepCards.forEach(card => {
+    if (!card) return;
+    card.addEventListener("mouseenter", () => {
+      card.classList.add("energized");
+    });
+    card.addEventListener("mouseleave", () => {
+      handleScrollProgress();
+    });
+  });
+
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScrollProgress();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener("resize", handleScrollProgress, { passive: true });
+  handleScrollProgress();
+}
+
+// ─── 14. BARRA DE PROGRESO DE LECTURA (TOP LASER BAR) ───
+function initScrollProgressBar() {
+  const progressBar = document.getElementById("scroll-progress-bar");
+  if (!progressBar) return;
+
+  function updateBar() {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight <= 0) return;
+    const percent = Math.min(100, Math.max(0, (scrollY / docHeight) * 100));
+    progressBar.style.width = `${percent}%`;
+  }
+
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateBar();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  updateBar();
 }
