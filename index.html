@@ -4,56 +4,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALZENTO — Páginas web que consiguen clientes</title>
-  <meta name="description" content="Diseñamos páginas web para negocios locales enfocadas en posicionamiento en Google y contacto directo por WhatsApp. Resultados reales, no métricas vacías.">
+  <title>ALZENTO — Páginas web que consiguen clientes locales</title>
+  <meta name="description" content="Diseñamos páginas web para negocios locales enfocadas en posicionamiento #1 en Google y contacto directo por WhatsApp. Entrega en 48 horas. Resultados reales.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-logo" aria-label="Ir al inicio">
+  <a href="#" class="nav-logo" aria-label="Ir al inicio de ALZENTO">
     <img src="img/logoalzento.png" alt="ALZENTO Logo" loading="lazy" width="70">
   </a>
   <ul class="nav-links">
     <li><a href="#problema">El problema</a></li>
+    <li><a href="#comparador">Sin web vs ALZENTO</a></li>
     <li><a href="#servicios">Qué incluye</a></li>
-    <li><a href="#sobre">Quiénes somos</a></li>
-    <li><a href="#" class="nav-cta wa-link">Hablar por WhatsApp</a></li>
+    <li><a href="#proyectos">Casos reales</a></li>
+    <li><a href="#faq">Preguntas</a></li>
+    <li><a href="#" class="nav-cta wa-link btn-magnetic">Hablar por WhatsApp</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="glow-orb"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow"><span></span>Para negocios locales<span class="pulse-point"></span></p>
-    <h1>TU NEGOCIO<br>VISIBLE EN GOOGLE.<br>TUS CLIENTES EN <em>WHATSAPP</em></h1>
-    <p class="hero-sub">Diseñamos páginas web que posicionan tu negocio en Google y convierten cada visita en un mensaje de WhatsApp. Sin formularios. Sin rodeos. Solo clientes.</p>
-    <div class="hero-actions">
-      <a href="#" class="btn-wa wa-link">
-        <i class="icon-wa"></i>
-        Quiero clientes nuevos
-      </a>
-      <a href="#servicios" class="btn-ghost">Ver qué incluye →</a>
+  <div class="glow-orb hero-orb-left"></div>
+  <div class="glow-orb hero-orb-right"></div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <!-- Urgency availability pill -->
+      <div class="hero-urgency-badge reveal">
+        <span class="pulse-point green"></span>
+        <span class="urgency-text">Disponibilidad esta semana: <strong>Solo 1 cupo para entrega en 48h</strong></span>
+      </div>
+
+      <p class="hero-eyebrow reveal reveal-delay-1">
+        <span></span>EXCLUSIVO PARA NEGOCIOS LOCALES Y DE SERVICIOS<span></span>
+      </p>
+
+      <!-- Giant Interactive H1 with Cursor Proximity Color Tracking -->
+      <h1 id="hero-main-title" class="hero-title reveal reveal-delay-1" aria-label="TU NEGOCIO VISIBLE EN GOOGLE. TUS CLIENTES EN WHATSAPP">
+        TU NEGOCIO<br>
+        VISIBLE EN GOOGLE.<br>
+        TUS CLIENTES EN <em>WHATSAPP</em>
+      </h1>
+
+      <p class="hero-sub reveal reveal-delay-2">
+        Diseñamos páginas web de alta conversión que posicionan tu negocio en los primeros lugares de Google y convierten visitas en mensajes directos de WhatsApp. <strong>Sin formularios. Sin enredos. Solo clientes listos para contratar.</strong>
+      </p>
+
+      <div class="hero-actions reveal reveal-delay-2">
+        <a href="#" class="btn-wa wa-link btn-magnetic" id="hero-cta-btn">
+          <i class="icon-wa"></i>
+          <span>Quiero clientes nuevos ya</span>
+          <span class="btn-pulse-wave"></span>
+        </a>
+        <a href="#comparador" class="btn-ghost btn-magnetic">Ver comparativa real →</a>
+      </div>
+
+      <div class="hero-stats reveal reveal-delay-2">
+        <div class="stat">
+          <div class="stat-num counter" data-target="48">0</div>
+          <div class="stat-label">Horas de entrega</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num counter" data-target="100">0</div>
+          <div class="stat-label">% Enfoque en conversión</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><span class="highlight-green">#1</span></div>
+          <div class="stat-label">Posición en Google local</div>
+        </div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num counter" data-target="48">0</div>
-        <div class="stat-label">Horas de entrega</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num counter" data-target="100">0</div>
-        <div class="stat-label">% Enfocado en resultados</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">Google</div>
-        <div class="stat-label">Optimizado para posicionar</div>
+
+    <!-- HERO VISUAL COMPOSITION (FLOATING GLASS MOCKUP + LIVE NOTIFICATION) -->
+    <div class="hero-visual-side reveal reveal-delay-2">
+      <div class="hero-mock-stack">
+        <!-- Main Google Result Card Mockup -->
+        <div class="hero-google-card glass-panel spotlight-card">
+          <div class="hgc-top">
+            <div class="hgc-search-pill">
+              <i class="icon-search"></i>
+              <span>cerrajero urgente cerca de mi</span>
+            </div>
+            <span class="hgc-live-badge"><span class="pulse-point green"></span> En vivo</span>
+          </div>
+
+          <div class="hgc-result-body">
+            <div class="hgc-rank-row">
+              <span class="hgc-rank-number">#1 en Google Maps</span>
+              <span class="hgc-gold-pill">✦ Destacado en tu ciudad</span>
+            </div>
+
+            <h3 class="hgc-biz-name">Tu Negocio de Servicios</h3>
+            
+            <div class="hgc-rating-row">
+              <div class="stars-gold">★★★★★</div>
+              <span class="rating-val">5.0 (68 opiniones)</span>
+              <span class="open-status">· Abierto ahora</span>
+            </div>
+
+            <p class="hgc-biz-snippet">
+              Servicio inmediato a domicilio. Atención profesional garantizada. Llegamos en 20 minutos.
+            </p>
+
+            <div class="hgc-action-buttons">
+              <a href="#" class="hgc-wa-pill wa-link">
+                <i class="icon-wa"></i> Enviar WhatsApp
+              </a>
+              <span class="hgc-call-pill">Llamar 24h</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating WhatsApp Notification Badge -->
+        <div class="hero-wa-notification glass-panel">
+          <div class="hwn-icon-wrap">
+            <i class="icon-wa"></i>
+            <span class="hwn-ping"></span>
+          </div>
+          <div class="hwn-details">
+            <div class="hwn-header">
+              <strong>WhatsApp · Nuevo Cliente</strong>
+              <span class="hwn-time">Hace 1 min</span>
+            </div>
+            <p class="hwn-message">"Hola! Los vi en los primeros de Google, ¿me pueden cotizar para hoy?"</p>
+          </div>
+        </div>
+
+        <!-- Floating Trust Metric Badge -->
+        <div class="hero-metric-badge glass-panel">
+          <div class="hmb-icon">🚀</div>
+          <div>
+            <div class="hmb-val">+18 Contactos</div>
+            <div class="hmb-lbl">promedio por semana</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
   <div class="hero-scroll"><div class="scroll-line"></div></div>
 </section>
 
@@ -62,124 +156,380 @@
   <div class="marquee-track" id="dynamic-marquee"></div>
 </div>
 
-<!-- PROBLEMA -->
+<!-- PROBLEMA & SIMULADOR DE BÚSQUEDA INTERACTIVO -->
 <section id="problema">
   <div class="section-inner">
     <div class="section-label">Por qué importa</div>
     <h2 class="reveal-blur">TU NEGOCIO EXISTE,<br>PERO <em>GOOGLE</em><br>NO LO SABE</h2>
+    
     <div class="problema-grid">
+      <!-- Columna izquierda: Lista de dolores reales -->
       <ul class="problema-list">
-        <li class="reveal">
+        <li class="reveal spotlight-card glass-panel">
           <div class="problema-icon"><i class="icon-search"></i></div>
           <div class="problema-text">
-            <strong>Tu competencia aparece, tú no</strong>
-            <p>Cuando alguien busca "cerrajero cerca" o "plomero urgente", ven a otros. Tu negocio no existe para ellos.</p>
+            <strong>Tu competencia se lleva a tus clientes</strong>
+            <p>Cuando alguien busca con urgencia en Google tu servicio ("plomero cerca", "cerrajero 24h"), ven a otros. Tu negocio es invisible para ellos.</p>
           </div>
         </li>
-        <li class="reveal reveal-delay-1">
+        <li class="reveal reveal-delay-1 spotlight-card glass-panel">
           <div class="problema-icon"><i class="icon-phone-slash"></i></div>
           <div class="problema-text">
-            <strong>Solo trabajas por referidos</strong>
-            <p>Las recomendaciones son un buen comienzo, pero no son suficientes para crecer de forma estable y predecible.</p>
+            <strong>Vivir de los referidos es peligroso</strong>
+            <p>El boca a boca es excelente, pero es irregular. Un mes tienes trabajo y al siguiente esperas a que suene el teléfono sin control de tus ingresos.</p>
           </div>
         </li>
-        <li class="reveal reveal-delay-2">
+        <li class="reveal reveal-delay-2 spotlight-card glass-panel">
           <div class="problema-icon"><i class="icon-money-lost"></i></div>
           <div class="problema-text">
-            <strong>Redes sociales que no generan contactos</strong>
-            <p>Muchos me gusta, pocos mensajes. Quien busca un servicio urgente, busca en Google, no en Instagram.</p>
+            <strong>Redes sociales que dan likes, pero no ventas</strong>
+            <p>Publicar en Instagram requiere horas y casi nunca trae clientes que paguen. Quien tiene una urgencia real, <strong>busca en Google</strong>.</p>
           </div>
         </li>
       </ul>
-      <div class="problema-visual reveal reveal-delay-2">
-        <div class="visual-card glass-panel">
-          <div class="vc-title">Clientes potenciales que te encontrarían</div>
-          <div class="vc-sub">Según el tipo de presencia digital:</div>
-          <br>
-          <div class="vc-bar-group">
-            <div class="vc-bar-label">Sin presencia digital</div>
-            <div class="vc-bar-track"><div class="vc-bar-fill low"></div></div>
+
+      <!-- Columna derecha: SIMULADOR DE GOOGLE TOTALMENTE INTERACTIVO -->
+      <div class="problema-visual reveal reveal-delay-1">
+        <div class="simulador-card glass-panel spotlight-card" id="google-simulator">
+          <div class="sim-header">
+            <div class="sim-badge-row">
+              <span class="sim-badge-pill"><span class="pulse-point green"></span> Simulador en Vivo</span>
+              <span class="sim-hint">Haz clic en un sector o prueba el tuyo</span>
+            </div>
+            <h3 class="sim-title">¿Cómo te vería un cliente en Google hoy?</h3>
           </div>
-          <div class="vc-bar-group">
-            <div class="vc-bar-label">Solo redes sociales</div>
-            <div class="vc-bar-track"><div class="vc-bar-fill medium"></div></div>
+
+          <!-- Chips de sectores interactivos -->
+          <div class="sim-chips-container" id="sim-chips">
+            <button type="button" class="sim-chip active" data-sector="cerrajero" data-query="cerrajero urgente cerca de mi" data-name="Cerrajería Segura" data-city="Bogotá" data-msg="Hola! Busqué cerrajero urgente en Google y necesito abrir una chapa. ¿Están disponibles?">🔑 Cerrajero</button>
+            <button type="button" class="sim-chip" data-sector="barberia" data-query="mejor barbería cerca de mi" data-name="Barbería Kings Club" data-city="Medellín" data-msg="Hola! Vi su barbería en Google, quiero agendar un corte y barba para hoy.">💈 Barbería</button>
+            <button type="button" class="sim-chip" data-sector="odontologo" data-query="urgencias odontológicas 24h" data-name="Clínica Dental Sonrisas" data-city="Cali" data-msg="Hola, busqué dentista de urgencia en Google, ¿tienen cita libre de inmediato?">🦷 Odontólogo</button>
+            <button type="button" class="sim-chip" data-sector="electricista" data-query="electricista a domicilio urgente" data-name="Electricista Express" data-city="Barranquilla" data-msg="Buenas tardes, vi su página en Google, tengo un corto en mi casa, ¿pueden venir?">⚡ Electricista</button>
+            <button type="button" class="sim-chip" data-sector="taller" data-query="taller mecánico frenos cerca" data-name="Taller Mecánico Master" data-city="Tu Ciudad" data-msg="Hola, encontré su taller en Google, ¿hacen revisión de frenos y cambio de aceite hoy?">🔧 Mecánico</button>
           </div>
-          <div class="vc-bar-group">
-            <div class="vc-bar-label">Web en Google (ALZENTO)</div>
-            <div class="vc-bar-track glow-track"><div class="vc-bar-fill high"></div></div>
+
+          <!-- Input interactivo para probar nombre propio -->
+          <div class="sim-custom-bar">
+            <input type="text" id="sim-custom-input" placeholder="O escribe el nombre de tu propio negocio aquí..." maxlength="40">
+            <button type="button" id="sim-custom-btn" class="btn-ghost small btn-magnetic">Probar →</button>
           </div>
-          <div class="google-mock" id="google-mock">
+
+          <!-- Ventana de Google simulada -->
+          <div class="sim-google-viewport">
             <div class="gm-bar">
               <div class="gm-logo"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
-              <div class="gm-query"><span class="gm-query-text" id="gm-text"></span></div>
+              <div class="gm-query">
+                <span class="gm-query-text" id="gm-text">cerrajero urgente cerca de mi</span>
+              </div>
             </div>
-            <div class="gm-results" id="gm-results"></div>
+
+            <div class="sim-results-flow">
+              <!-- Competencia sin web -->
+              <div class="sim-res-item competitor">
+                <div class="sri-top">
+                  <span class="badge-lost">Competidor sin página web</span>
+                  <span class="sri-domain">facebook.com/negocio123</span>
+                </div>
+                <div class="sri-title">Página de Facebook no actualizada</div>
+                <div class="sri-desc">Sin teléfono a la vista, sin precios claros, última publicación en 2024. El cliente se va inmediatamente...</div>
+              </div>
+
+              <!-- Resultado ALZENTO Destacado -->
+              <div class="sim-res-item alzento-result" id="gm-active-card">
+                <div class="sri-top">
+                  <div class="sri-fav"><i class="icon-wa"></i></div>
+                  <span class="sri-domain" id="sim-domain">www.cerrajeriasegura.co</span>
+                  <span class="badge-alzento">✦ Posicionamiento ALZENTO</span>
+                </div>
+
+                <div class="sri-title" id="sim-title">Cerrajería Segura Bogotá — Urgencias 24/7 en tu zona</div>
+                
+                <div class="sri-meta">
+                  <span class="stars">★★★★★</span>
+                  <span class="meta-rating" id="sim-rating">5.0 (84 opiniones)</span>
+                  <span class="meta-highlight">· Llegamos en 20 min</span>
+                  <span class="meta-tag">· Verificado</span>
+                </div>
+
+                <div class="sri-desc" id="sim-desc">
+                  ¿Olvidaste tus llaves o chapa trabada? Servicio profesional urgente en Bogotá. Precios justos sin sorpresas y contacto directo en un clic.
+                </div>
+
+                <div class="sri-footer">
+                  <a href="#" class="sim-wa-cta wa-link" id="sim-wa-btn">
+                    <i class="icon-wa"></i>
+                    <span id="sim-btn-text">Escribir por WhatsApp a este negocio</span>
+                  </a>
+                  <span class="sim-speed-badge">⚡ Carga en 0.4s</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <br>
-          <a href="#" class="btn-ghost small wa-link">Quiero aparecer en Google →</a>
+
+          <div class="sim-card-bottom">
+            <span>¿Quieres que tu negocio se vea exactamente así?</span>
+            <a href="#" class="btn-wa wa-link btn-magnetic small">Quiero aparecer primero →</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SOLUCIÓN -->
+<!-- COMPARADOR VISUAL (NUEVA SECCIÓN: SIN WEB VS CON ALZENTO) -->
+<section id="comparador">
+  <div class="section-inner">
+    <div class="section-label">El contraste real</div>
+    <h2 class="reveal-blur">DOS CAMINOS:<br>¿SEGUIR INVISIBLE O <em>LIDERAR TU CIUDAD</em>?</h2>
+    <p class="comparador-intro reveal">
+      La diferencia entre tener una página web optimizada por ALZENTO o no tenerla no es el diseño: <strong>es cuántos clientes te pagan cada semana.</strong>
+    </p>
+
+    <div class="comparador-grid">
+      <!-- Tarjeta: Sin página web -->
+      <div class="comp-card without-web spotlight-card glass-panel reveal">
+        <div class="comp-badge bad">❌ Tu negocio sin web (o solo redes)</div>
+        <h3 class="comp-title">Incertidumbre y clientes perdidos</h3>
+        <p class="comp-summary">Depender únicamente del boca a boca o de publicar en Instagram sin resultados.</p>
+
+        <ul class="comp-list">
+          <li>
+            <span class="comp-icon bad">✕</span>
+            <div>
+              <strong>Invisibilidad en el momento de compra:</strong>
+              <p>Cuando alguien busca tu servicio urgente en Google, se lo estás regalando a tu competencia.</p>
+            </div>
+          </li>
+          <li>
+            <span class="comp-icon bad">✕</span>
+            <div>
+              <strong>Cerrado 24/7 para el tráfico digital:</strong>
+              <p>Por las noches y fines de semana no capturas a nadie que necesite agendar o consultar.</p>
+            </div>
+          </li>
+          <li>
+            <span class="comp-icon bad">✕</span>
+            <div>
+              <strong>Seguidores que no compran:</strong>
+              <p>Muchos likes y felicitaciones en redes sociales, pero la caja registradora sigue vacía.</p>
+            </div>
+          </li>
+          <li>
+            <span class="comp-icon bad">✕</span>
+            <div>
+              <strong>Regateo constante de precios:</strong>
+              <p>Sin una presencia seria, el cliente te percibe informal y te pide rebajas antes de empezar.</p>
+            </div>
+          </li>
+          <li>
+            <span class="comp-icon bad">✕</span>
+            <div>
+              <strong>Pérdida de tiempo en cotizaciones frías:</strong>
+              <p>Respondes decenas de "¿precio?" a personas que nunca tuvieron la intención real de contratarte.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="comp-footer bad">
+          <span>Resultado: Clientes que se van a otros</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Con ALZENTO -->
+      <div class="comp-card with-alzento spotlight-card glass-panel reveal reveal-delay-1 featured-glow">
+        <div class="comp-badge good">✦ Con tu página ALZENTO</div>
+        <h3 class="comp-title">Máquina de contactos a tu WhatsApp</h3>
+        <p class="comp-summary">Posicionamiento local automático enfocado en personas listas para pagar.</p>
+
+        <ul class="comp-list">
+          <li>
+            <span class="comp-icon good">✓</span>
+            <div>
+              <strong>Posición privilegiada en Google:</strong>
+              <p>Apareces exactamente cuando un cliente busca tu oficio en tu ciudad o barrio.</p>
+            </div>
+          </li>
+          <li>
+            <span class="comp-icon good">✓</span>
+            <div>
+              <strong>Conversión directa a WhatsApp en 1 clic:</strong>
+              <p>Sin formularios aburridos de correo. El cliente hace un toque y ya está chateando contigo.</p>
+            </div>
+          </li>
+          <li>
+            <span class="comp-icon good">✓</span>
+            <div>
+              <strong>Mensajes pre-redactados de alta intención:</strong>
+              <p>El cliente llega con el servicio específico que necesita, listo para que le des el precio y cierres.</p>
+            </div>
+          </li>
+          <li>
+            <span class="comp-icon good">✓</span>
+            <div>
+              <strong>Autoridad y cobro sin objeciones:</strong>
+              <p>Una página rápida y pulida transmite profesionalismo. Los clientes pagan con gusto y sin regatear.</p>
+            </div>
+          </li>
+          <li>
+            <span class="comp-icon good">✓</span>
+            <div>
+              <strong>Entrega garantizada en 48 horas:</strong>
+              <p>En solo 2 días hábiles tu web está en línea atrayendo prospectos, sin enredos técnicos para ti.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="comp-footer good">
+          <a href="#" class="btn-wa wa-link btn-magnetic">
+            <i class="icon-wa"></i>
+            Quiero mi web en 48 horas
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIÓN / PROCESO -->
 <section id="solucion">
   <div class="section-inner">
     <div class="section-label">Cómo funciona</div>
     <h2 class="reveal-blur">TRES PASOS.<br>UN RESULTADO: <em>CLIENTES</em></h2>
     <p class="solucion-intro reveal">Sin tecnología innecesaria. Sin reuniones interminables. Solo un proceso probado que funciona.</p>
     <div class="solucion-steps">
-      <div class="step reveal">
+      <div class="step reveal spotlight-card glass-panel">
         <div class="step-num glass">01</div>
         <div class="step-title">Aparecer en Google</div>
-        <p>Diseñamos tu página con las palabras que tus clientes reales escriben en Google. Tu negocio empieza a aparecer donde importa.</p>
+        <p>Estructuramos tu página con las palabras exactas que tus clientes reales escriben en Google cuando necesitan una solución urgente.</p>
       </div>
-      <div class="step reveal reveal-delay-1">
+      <div class="step reveal reveal-delay-1 spotlight-card glass-panel">
         <div class="step-num glass">02</div>
-        <div class="step-title">Generar confianza rápido</div>
-        <p>Un diseño claro, directo y adaptado a móvil. El visitante entiende en segundos qué ofreces y por qué elegirte.</p>
+        <div class="step-title">Generar confianza en 5 segundos</div>
+        <p>Un diseño claro, limpio y optimizado para celular. El visitante entiende de inmediato tu experiencia, garantías y por qué debe elegirte a ti.</p>
       </div>
-      <div class="step reveal reveal-delay-2">
+      <div class="step reveal reveal-delay-2 spotlight-card glass-panel fast-track">
         <div class="step-num glass fast-track">03</div>
-        <div class="step-title">Convertir en contacto</div>
-        <p>Un clic y el cliente está en tu WhatsApp con un mensaje listo. Tú cierras el trato, nosotros pusimos al cliente frente a ti.</p>
+        <div class="step-title">Convertir en mensaje de WhatsApp</div>
+        <p>Un clic y el cliente está en tu WhatsApp con un mensaje listo. Tú atiendes y cierras el trato, nosotros pusimos al cliente frente a ti.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA INTERMEDIO -->
+<!-- CTA INTERMEDIO CON URGENCIA -->
 <div class="mini-cta-banner reveal">
-  <div class="mcb-inner glass-panel">
-    <h3>¿Cuántos clientes se están yendo con tu competencia hoy?</h3>
-    <a href="#" class="btn-wa wa-link"><i class="icon-wa"></i> Cotizar mi página web</a>
+  <div class="mcb-inner glass-panel spotlight-card">
+    <div class="mcb-left">
+      <div class="mcb-availability">
+        <span class="pulse-point green"></span>
+        <span>Entrega exprés en 48 horas</span>
+      </div>
+      <h3>¿Cuántos clientes se están yendo con tu competencia hoy?</h3>
+      <p>Cada día sin página web en Google son llamadas que recibe el negocio de al lado.</p>
+    </div>
+    <a href="#" class="btn-wa wa-link btn-magnetic"><i class="icon-wa"></i> Cotizar mi página web</a>
   </div>
 </div>
 
-<!-- SERVICIOS -->
+<!-- SERVICIOS: BENTO GRID MODERNO (REORGANIZADO CON ESTÉTICA PREMIUM) -->
 <section id="servicios">
   <div class="section-inner">
     <div class="section-label">Qué incluye</div>
-    <h2 class="reveal-blur">TODO LO QUE NECESITAS<br>PARA <em>CONSEGUIR CLIENTES</em></h2>
-    <div class="servicios-grid" id="servicios-container">
-      <!-- Inyectados por JS -->
+    <h2 class="reveal-blur">TODO LO QUE TU NEGOCIO NECESITA<br>PARA <em>DOMINAR EN TU ZONA</em></h2>
+    <p class="bento-intro reveal">Cada componente está diseñado con un solo objetivo: que personas con necesidad urgente te escriban por WhatsApp.</p>
+
+    <div class="bento-grid" id="servicios-bento">
+      <!-- Item 1: Tarjeta Grande (2 columnas en desktop) - SEO Local -->
+      <div class="bento-card bento-wide spotlight-card glass-panel reveal">
+        <div class="bento-badge gold">★ Pilar Principal</div>
+        <div class="bento-content">
+          <div class="bento-icon">📍</div>
+          <h3 class="bento-title">SEO Local en Google: Clientes con Intención Real</h3>
+          <p class="bento-desc">
+            No buscamos seguidores ni visitas vacías. Optimizamos tu web con las palabras clave locales exactas ("servicio + tu ciudad/barrio") para que aparezcas en los primeros puestos y en Google Maps.
+          </p>
+          <div class="bento-keywords-preview">
+            <span class="bk-tag highlight">✓ Posicionado #1 Google</span>
+            <span class="bk-tag">Ficha de Maps Optimizada</span>
+            <span class="bk-tag">Palabras Clave de tu Sector</span>
+            <span class="bk-tag">Tráfico Orgánico Permanente</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Embudo a WhatsApp -->
+      <div class="bento-card spotlight-card glass-panel reveal reveal-delay-1">
+        <div class="bento-badge green">Conversión Instantánea</div>
+        <div class="bento-icon">💬</div>
+        <h3 class="bento-title">Embudo Directo a WhatsApp</h3>
+        <p class="bento-desc">
+          Eliminamos los formularios que nadie llena. Cada llamado a la acción abre tu WhatsApp con un mensaje pre-armado con el servicio solicitado.
+        </p>
+        <div class="bento-mini-chat">
+          <div class="bmc-bubble">"Hola, vi tu web y quiero cotizar para hoy..."</div>
+        </div>
+      </div>
+
+      <!-- Item 3: Carga Rápida Score 99+ -->
+      <div class="bento-card spotlight-card glass-panel reveal reveal-delay-2">
+        <div class="bento-badge">Velocidad Móvil</div>
+        <div class="bento-icon">⚡</div>
+        <h3 class="bento-title">Carga Ultrarrápida (< 0.8s)</h3>
+        <p class="bento-desc">
+          Si tu web tarda más de 2 segundos en cargar, el cliente se va. Construimos código limpio, ultra-ligero y adaptado a cualquier teléfono.
+        </p>
+        <div class="bento-speed-score">
+          <span class="score-circle">99</span>
+          <span class="score-lbl">PageSpeed Score Google</span>
+        </div>
+      </div>
+
+      <!-- Item 4: Dominio, Hosting y SSL -->
+      <div class="bento-card spotlight-card glass-panel reveal">
+        <div class="bento-badge">Cero Complicaciones</div>
+        <div class="bento-icon">🔒</div>
+        <h3 class="bento-title">Dominio, Hosting y SSL</h3>
+        <p class="bento-desc">
+          Todo resuelto desde el primer día. Dominio propio (.com o local), alojamiento veloz en servidores de última generación y candado SSL seguro.
+        </p>
+        <ul class="bento-checklist">
+          <li>✓ Configuración técnica 100% resuelta</li>
+          <li>✓ Sin cobros sorpresa ni letras pequeñas</li>
+        </ul>
+      </div>
+
+      <!-- Item 5: Copywriting de Venta Local (2 columnas) -->
+      <div class="bento-card bento-wide spotlight-card glass-panel reveal reveal-delay-1">
+        <div class="bento-badge">Psicología de Cierre</div>
+        <div class="bento-content">
+          <div class="bento-icon">✍️</div>
+          <h3 class="bento-title">Copywriting Persuasivo y Textos que Venden</h3>
+          <p class="bento-desc">
+            No ponemos textos genéricos de relleno. Redactamos títulos claros que transmiten confianza, rapidez y garantías para que el cliente no dude en escribirte de inmediato.
+          </p>
+          <div class="bento-badges-row">
+            <span class="b-pill">Garantía visible</span>
+            <span class="b-pill">Tiempos de respuesta claros</span>
+            <span class="b-pill">Llamados a la acción estratégicos</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PROYECTOS -->
+<!-- PROYECTOS / CASOS REALES -->
 <section id="proyectos">
   <div class="section-inner">
     <div class="proyectos-header">
       <div>
-        <div class="section-label">Ejemplos reales</div>
-        <h2 class="reveal-blur">PÁGINAS QUE<br>YA ESTÁN <em>FUNCIONANDO</em></h2>
+        <div class="section-label">Casos reales</div>
+        <h2 class="reveal-blur">PÁGINAS QUE<br>YA ESTÁN <em>CONVIRTIENDO</em></h2>
       </div>
-      <a href="#" class="btn-ghost wa-link">Quiero una como estas →</a>
+      <a href="#" class="btn-ghost wa-link btn-magnetic">Quiero una para mi negocio →</a>
     </div>
     <div class="proyectos-grid" id="proyectos-container">
-      <!-- Inyectados por JS -->
+      <!-- Inyectados dinámicamente con UI de alta fidelidad por JS -->
     </div>
   </div>
 </section>
@@ -192,26 +542,26 @@
         <div class="section-label">Quién está detrás</div>
         <h2 class="reveal-blur">UN PROYECTO<br>ENFOCADO EN <em>RESULTADOS</em></h2>
         <div class="sobre-body">
-          <p>ALZENTO no es una agencia con decenas de empleados. Es un proyecto dirigido por un desarrollador con un objetivo concreto: <strong>ayudar a negocios pequeños a conseguir clientes a través de internet.</strong></p>
-          <p>Trabajo directamente con cada cliente, sin intermediarios. Eso significa que quien diseña tu página también es quien se asegura de que funcione.</p>
-          <p>Me interesa la tecnología cuando resuelve problemas reales. Una página que genera 5 contactos nuevos por semana para un electricista es más valiosa que cualquier diseño sofisticado que nadie ve.</p>
+          <p>ALZENTO no es una agencia tradicional con decenas de intermediarios que inflan los precios. Es un proyecto dirigido directamente por un desarrollador con un objetivo concreto: <strong>ayudar a negocios locales y profesionales independientes a conseguir clientes de forma predecible con internet.</strong></p>
+          <p>Trabajas directamente conmigo. Eso significa que quien diseña y programa tu página web es quien se asegura personalmente de que se posicione y funcione.</p>
+          <p>La tecnología solo sirve si produce dinero para tu negocio. Una página que le genera 6 contactos nuevos cada semana a un electricista vale más que cualquier diseño lujoso que nadie visita.</p>
         </div>
         <div class="sobre-valores">
-          <div class="valor-item reveal">
+          <div class="valor-item reveal spotlight-card glass-panel">
             <div class="valor-dot"></div>
-            <span>Entrega en máximo 48 horas hábiles</span>
+            <span><strong>Entrega en máximo 48 horas hábiles</strong> garantizada</span>
           </div>
-          <div class="valor-item reveal reveal-delay-1">
+          <div class="valor-item reveal reveal-delay-1 spotlight-card glass-panel">
             <div class="valor-dot"></div>
-            <span>Comunicación directa, sin intermediarios</span>
+            <span><strong>Comunicación directa por WhatsApp</strong>, sin tickets ni demoras</span>
           </div>
-          <div class="valor-item reveal reveal-delay-2">
+          <div class="valor-item reveal reveal-delay-2 spotlight-card glass-panel">
             <div class="valor-dot"></div>
-            <span>Sin contratos largos ni letras pequeñas</span>
+            <span><strong>Sin contratos de amarre</strong> ni mensualidades sorpresa</span>
           </div>
-          <div class="valor-item reveal reveal-delay-2">
+          <div class="valor-item reveal reveal-delay-2 spotlight-card glass-panel">
             <div class="valor-dot"></div>
-            <span>Si no funciona, hablamos hasta que funcione</span>
+            <span><strong>Acompañamiento post-entrega:</strong> no te dejamos solo</span>
           </div>
         </div>
       </div>
@@ -231,38 +581,157 @@
   </div>
 </section>
 
+<!-- PREGUNTAS FRECUENTES (NUEVA SECCIÓN CON ACORDEÓN SUAVE) -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="faq-header text-center">
+      <div class="section-label" style="justify-content: center;">Dudas resueltas</div>
+      <h2 class="reveal-blur">PREGUNTAS FRECUENTES<br>SIN <em>LETRAS PEQUEÑAS</em></h2>
+      <p class="faq-sub reveal">Todo lo que necesitas saber antes de dar el paso. Transparencia total.</p>
+    </div>
+
+    <div class="faq-accordion-container" id="faq-container">
+      <!-- Item 1 -->
+      <div class="faq-item spotlight-card glass-panel reveal">
+        <button type="button" class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Por qué necesito una página web si ya tengo Instagram o Facebook?</span>
+          <span class="faq-icon-toggle"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Porque la <strong>intención del cliente</strong> es completamente distinta. En Instagram la gente está mirando fotos por entretenimiento; nadie entra a Instagram a buscar <em>"plomero urgente fuga de agua"</em> o <em>"cerrajero 24h cerca"</em>. Cuando una persona tiene una necesidad real y urgente, <strong>va directo a Google</strong> con la tarjeta en la mano. Una web te pone en el momento exacto en que esa persona quiere pagar.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="faq-item spotlight-card glass-panel reveal reveal-delay-1">
+        <button type="button" class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿En verdad la página está lista en 48 horas? ¿Cómo es el proceso?</span>
+          <span class="faq-icon-toggle"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Sí, <strong>100% garantizado en 48 horas hábiles</strong>. Nuestro proceso está optimizado: al iniciar te enviamos un cuestionario breve por WhatsApp de 5 minutos sobre tus servicios, tu zona y tus datos de contacto. Con eso nosotros investigamos qué buscan tus clientes en Google, redactamos los textos de venta, montamos la estructura y la dejamos al aire lista para recibir contactos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="faq-item spotlight-card glass-panel reveal reveal-delay-2">
+        <button type="button" class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Qué necesito tener para empezar? ¿Y si no tengo logo ni fotos profesionales?</span>
+          <span class="faq-icon-toggle"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>No te preocupes por nada de eso. Si no tienes logo, te creamos una identidad tipográfica limpia y moderna incluida. Si no tienes fotos profesionales, combinamos imágenes premium de tu sector con fotos reales de tus trabajos tomadas con tu celular. Lo primordial para vender en Google no son fotos de estudio, sino <strong>claridad, rapidez y confianza inmediata</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="faq-item spotlight-card glass-panel reveal">
+        <button type="button" class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Tengo que pagar mensualidades obligatorias o comisiones por clientes?</span>
+          <span class="faq-icon-toggle"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p><strong>Cero mensualidades obligatorias ni comisiones.</strong> El pago de la web es único e incluye el primer año completo de dominio y hosting de alta velocidad. Los clientes que te escriban y todo el dinero que generes es 100% tuyo sin intermediarios.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="faq-item spotlight-card glass-panel reveal reveal-delay-1">
+        <button type="button" class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Por qué el contacto va directo a WhatsApp y no a un formulario de correo?</span>
+          <span class="faq-icon-toggle"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Porque en servicios locales <strong>el tiempo es oro</strong>. Si un cliente llena un formulario de correo, espera horas o días para recibir respuesta y mientras tanto ya contrató al competidor que le contestó en el acto. Con WhatsApp el cliente te escribe en 1 segundo y tú cierras el servicio en tiempo real desde la comodidad de tu teléfono.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="faq-item spotlight-card glass-panel reveal reveal-delay-2">
+        <button type="button" class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">¿Qué pasa si quiero hacer cambios después de la entrega?</span>
+          <span class="faq-icon-toggle"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Cuentas con garantía y soporte directo. Tras la entrega tienes revisiones incluidas para cambiar textos, números, fotos o servicios hasta que quedes totalmente conforme. Hablas siempre directamente conmigo por WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ CTA helper -->
+    <div class="faq-help-box glass-panel text-center reveal">
+      <p>¿Tienes otra pregunta sobre tu negocio o ciudad?</p>
+      <a href="#" class="btn-ghost small wa-link btn-magnetic">Pregúntame directamente por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
 <section id="cta">
   <div class="glow-orb bottom-orb"></div>
   <div class="cta-inner">
     <div class="section-label" style="justify-content: center;">Sin compromisos</div>
     <h2 class="reveal-blur">¿TU NEGOCIO<br>ESTÁ EN <em>GOOGLE</em>?</h2>
-    <p class="reveal reveal-delay-1">Si no apareces cuando alguien busca tu servicio, esa persona va con otro. Podemos resolverlo en 48 horas.</p>
-    <a href="#" class="cta-wa-big wa-link reveal reveal-delay-2">
-      <i class="icon-wa large"></i>
-      Escríbeme, es sin costo
-    </a>
-    <p class="cta-note"><span class="pulse-point green"></span> Respondo en menos de 2 horas · alzento.dev@gmail.com</p>
+    <p class="reveal reveal-delay-1">Si no apareces cuando alguien busca tu servicio hoy, esa persona ya le está pagando a tu competencia. Podemos resolverlo en 48 horas.</p>
+    
+    <div class="cta-action-wrap reveal reveal-delay-2">
+      <a href="#" class="cta-wa-big wa-link btn-magnetic">
+        <i class="icon-wa large"></i>
+        <span>Escríbeme por WhatsApp</span>
+        <span class="btn-pulse-wave"></span>
+      </a>
+    </div>
+
+    <p class="cta-note"><span class="pulse-point green"></span> Respondo en menos de 1 hora en días hábiles · alzento.dev@gmail.com</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <a href="#" class="footer-logo">
+  <a href="#" class="footer-logo" aria-label="Volver arriba">
     <img src="img/logoalzento.png" alt="ALZENTO Logo" loading="lazy" width="90">
   </a>
-  <p class="footer-copy">© <span id="year-placeholder">2026</span> ALZENTO — Páginas web que consiguen clientes.</p>
+  <p class="footer-copy">© <span id="year-placeholder">2026</span> ALZENTO — Páginas web que consiguen clientes locales.</p>
   <div class="footer-links">
+    <a href="#problema">Problema</a>
+    <a href="#comparador">Comparativa</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#faq">FAQ</a>
     <a href="mailto:alzento.dev@gmail.com">alzento.dev@gmail.com</a>
     <a href="#" class="wa-link">WhatsApp</a>
   </div>
 </footer>
 
-<!-- FLOATING WA BUTTON -->
-<a href="#" class="floating-wa wa-link" title="Hablar por WhatsApp">
-  <i class="icon-wa"></i>
-  <span class="floating-wa-tooltip glass-panel">¿Hablamos?</span>
-</a>
+<!-- FLOATING PRO-ACTIVE WA WIDGET -->
+<div class="floating-wa-wrapper" id="floating-wa-container">
+  <div class="floating-wa-popup glass-panel" id="floating-wa-popup">
+    <div class="fwp-header">
+      <span class="pulse-point green"></span>
+      <strong>ALZENTO en línea</strong>
+      <button type="button" class="fwp-close" id="fwp-close-btn" aria-label="Cerrar mensaje">&times;</button>
+    </div>
+    <p class="fwp-text">👋 ¿Tienes un negocio local? Dime en qué ciudad estás y te digo gratis cuántas personas buscan tu servicio al mes en Google.</p>
+    <a href="#" class="fwp-cta wa-link">Consultar gratis por WhatsApp →</a>
+  </div>
+
+  <a href="#" class="floating-wa wa-link btn-magnetic" title="Hablar por WhatsApp" id="floating-wa-btn">
+    <i class="icon-wa"></i>
+    <span class="floating-wa-ping"></span>
+    <span class="floating-wa-tooltip glass-panel">¿Hablamos de tu negocio?</span>
+  </a>
+</div>
 
 <script src="js/script.js"></script>
 </body>
